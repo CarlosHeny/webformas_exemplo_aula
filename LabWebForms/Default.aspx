@@ -3,10 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a>
-            <asp:Label ID="Label1" runat="server" Text="Nome"></asp:Label>
+        <p>&nbsp;<asp:Label ID="Label1" runat="server" Text="Nome"></asp:Label>
             <asp:TextBox ID="txtNome" runat="server"></asp:TextBox>
             <input type="text" id="inputTexto" runat="server"/>
             <div id="dvTest" runat="server">Teste</div>
@@ -39,6 +36,17 @@
 
             </p>
             <p>
+                Estado:
+                <asp:DropDownList ID="ddlEstado" onchange="carregaCidades(this)" runat="server" DataTextField="Nome" DataValueField="Id" OnSelectedIndexChanged="ddlEstado_SelectedIndexChanged" AutoPostBack="false" >
+                </asp:DropDownList>
+
+            </p>
+            <p>
+                Cidade: <asp:DropDownList ID="ddlCidade" runat="server" DataTextField="Nome" DataValueField="Id">
+                </asp:DropDownList>
+
+            </p>
+            <p>
                 <asp:Button ID="btnCadastrar" runat="server" OnClick="btnCadastrar_Click" Text="Cadastrar" />
 
             </p>
@@ -65,29 +73,14 @@
             </p>
             <p>
                 &nbsp;</p>
+        </div>
+        <div class="col-md-4">
             <p>
                 &nbsp;</p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
         </div>
         <div class="col-md-4">
-            <h2>Get more libraries</h2>
             <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
+                &nbsp;</p>
         </div>
     </div>
 

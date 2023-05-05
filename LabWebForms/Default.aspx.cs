@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LabWebForms.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,6 +18,13 @@ namespace LabWebForms
 
             gridClientes.DataSource = Cliente.Todos();
             gridClientes.DataBind();
+
+            if (!IsPostBack)
+            {
+                ddlEstado.DataSource = Estado.Todos();
+                ddlEstado.DataBind();
+                ddlEstado.Items.Insert(0, new ListItem("[Selecione]", "0"));
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -50,6 +58,15 @@ namespace LabWebForms
                 bodyTable.InnerHtml += $"<td>{c.Telefone}</td>";
                 bodyTable.InnerHtml += "</tr>";
             }
+        }
+
+        protected void ddlEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var estado = new Estado() { Id = Convert.ToInt32(ddlEstado.SelectedValue) };
+
+            ddlCidade.DataSource = Cidade.Todos(estado);
+            ddlCidade.DataBind();
+            ddlCidade.Items.Insert(0, new ListItem("[Selecione]", "0"));
         }
     }
 }

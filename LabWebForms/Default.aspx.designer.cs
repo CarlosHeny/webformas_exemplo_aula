@@ -105,6 +105,24 @@ namespace LabWebForms
         protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl inputTelefone;
 
         /// <summary>
+        /// Controle ddlEstado.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlEstado;
+
+        /// <summary>
+        /// Controle ddlCidade.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCidade;
+
+        /// <summary>
         /// Controle btnCadastrar.
         /// </summary>
         /// <remarks>
